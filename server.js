@@ -13,6 +13,8 @@ app.use(express.static("public"));
 app.engine("handlebars", handlebars({defaultLayout: "main"}));
 app.set("view engine", "handlebars");
 
+require("./routes/apiRoutes")(app)
+
 app.get("*", (req, res) => {
     res.redirect("/")
 })
