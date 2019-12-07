@@ -14,6 +14,7 @@ app.engine("handlebars", handlebars({defaultLayout: "main"}));
 app.set("view engine", "handlebars");
 
 require("./routes/apiRoutes")(app)
+require("./routes/htmlRoutes")(app)
 
 app.get("*", (req, res) => {
     res.redirect("/")
